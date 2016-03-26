@@ -1,8 +1,13 @@
 package valute;
 
+import java.util.LinkedList;
+
+import kursevi.Kurs;
+
 public class Valuta {
 	private String nazivValute;
 	private String kraciNazivValute;
+	private LinkedList<Kurs> kursValute;
 	
 	public String getNazivValute() {
 		return nazivValute;
@@ -15,5 +20,11 @@ public class Valuta {
 	}
 	public void setKraciNazivValute(String kraciNazivValute) {
 		this.kraciNazivValute = kraciNazivValute;
+	}
+	public LinkedList<Kurs> getKursValute() {
+		return kursValute;
+	}
+	public void setKursValute(LinkedList<Kurs> kursValute) {
+		this.kursValute = kursValute;
 	}
 }
