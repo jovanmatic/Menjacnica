@@ -12,7 +12,8 @@ public class Menjacnica implements InterfejsMenjacnice {
 		if(kurs == null) {
 			throw new NullPointerException();
 		}
-		valuta.getKursValute().addLast(kurs);
+		valuta.getKursValute().add(kurs);
+
 	}
 	@Override
 	public void obrisiKurs(Valuta valuta, Kurs kurs) {
@@ -26,10 +27,10 @@ public class Menjacnica implements InterfejsMenjacnice {
 		if(datum == null) {
 			throw new NullPointerException();
 		}
-		for (int i = 0; i < valuta.getKursValute().size(); i++) {
-			 	if(valuta.getKursValute().get(i).getDatum() == datum){
+		for(int i = 0; i < valuta.getKursValute().size(); i++) {
+			 if(valuta.getKursValute().get(i).getDatum() == datum && valuta.getNazivValute().equals(valuta.getNazivValute())){
 			 		return valuta.getKursValute().get(i);
-			 	}			
+			 } 		
 		}
 		return null;
 	}
